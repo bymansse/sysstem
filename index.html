@@ -3,18 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>SYSSTEM — AI Автоматизация бизнеса в Казахстане | Чатботы, CRM, Голосовые агенты</title>
-<meta name="description" content="AI-автоматизация для бизнеса в Казахстане: чатботы WhatsApp, CRM, голосовые агенты. Запуск под ключ за 14 дней с личным ведением проекта. Бесплатный аудит.">
-<meta name="keywords" content="AI автоматизация Казахстан, чатбот WhatsApp Алматы, CRM автоматизация, голосовой агент, автоматизация бизнеса, SYSSTEM">
+<title>SYSSTEM — AI Автоматизация бизнеса в Казахстане | Чатботы, CRM</title>
+<meta name="description" content="AI-автоматизация для бизнеса в Казахстане: чатботы WhatsApp, CRM и автоматизация соцсетей. Запуск под ключ за 14 дней с личным ведением проекта. Бесплатный аудит.">
+<meta name="keywords" content="AI автоматизация Казахстан, чатбот WhatsApp Алматы, CRM автоматизация, автоматизация соцсетей, автоматизация бизнеса, SYSSTEM">
 <meta name="robots" content="index, follow">
 <meta name="author" content="SYSSTEM">
 <link rel="canonical" href="https://sysstem.agency">
+
+<!-- Favicon / PWA -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0a0a0a">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sysstem.agency">
 <meta property="og:title" content="SYSSTEM — Увеличим поток заявок в 2–4 раза за 30 дней">
-<meta property="og:description" content="Внедряем AI-чатботы, CRM и голосовых агентов для бизнеса в Казахстане. Запуск под ключ за 14 дней. Бесплатный аудит.">
+<meta property="og:description" content="Внедряем AI-чатботы, CRM и автоматизацию соцсетей для бизнеса в Казахстане. Запуск под ключ за 14 дней. Бесплатный аудит.">
 <meta property="og:image" content="https://sysstem.agency/og-image.jpg">
 <meta property="og:locale" content="ru_KZ">
 <meta property="og:site_name" content="SYSSTEM">
@@ -31,7 +39,7 @@
   "@context":"https://schema.org",
   "@type":"ProfessionalService",
   "name":"SYSSTEM",
-  "description":"AI автоматизация для бизнеса в Казахстане — чатботы WhatsApp, CRM, голосовые агенты",
+  "description":"AI автоматизация для бизнеса в Казахстане — чатботы WhatsApp, CRM, автоматизация соцсетей",
   "url":"https://sysstem.agency",
   "telephone":"+77781118629",
   "address":{"@type":"PostalAddress","addressCountry":"KZ","addressLocality":"Алматы"},
@@ -99,11 +107,26 @@ nav {
   backdrop-filter: blur(20px);
 }
 .nav-logo {
-  font-family: var(--syne); font-weight:800; font-size:17px;
-  text-decoration:none; color:var(--white);
-  display:flex; align-items:center; gap:10px; letter-spacing:-0.02em;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  background:transparent;
+  background-color:transparent;
+  padding:0;
+  margin:0;
+  border:none;
+  line-height:0;
+  flex-shrink:0;
 }
-.logo-dot { width:8px; height:8px; background:var(--g); border-radius:50%; display:inline-block; animation: pulse 2s infinite; }
+.nav-logo img {
+  height:32px;
+  width:auto;
+  display:block;
+  object-fit:contain;
+  background:transparent;
+  transition:transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-logo:hover img { transform:scale(1.06); opacity:0.92; }
 @keyframes pulse {
   0%,100% { box-shadow: 0 0 0 0 rgba(170,255,0,0.4); }
   50% { box-shadow: 0 0 0 6px rgba(170,255,0,0); }
@@ -648,7 +671,21 @@ footer {
   display:flex; justify-content:space-between; align-items:center;
   flex-wrap:wrap; gap:16px;
 }
-.footer-logo { font-family:var(--syne); font-weight:800; font-size:15px; color:var(--muted); }
+.footer-logo {
+  line-height:0;
+  background:transparent;
+  background-color:transparent;
+  padding:0;
+  margin:0;
+}
+.footer-logo img {
+  height:32px;
+  width:auto;
+  display:block;
+  object-fit:contain;
+  background:transparent;
+  opacity:0.85;
+}
 .footer-copy { font-size:12px; color:var(--muted2); }
 .footer-live {
   font-size:11px; color:var(--muted); display:flex; align-items:center; gap:6px;
@@ -683,11 +720,21 @@ footer {
 .ww-close:hover { color:var(--white); }
 .ww-header { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
 .ww-av {
-  width:40px; height:40px; border-radius:50%;
-  background:var(--g); color:#000;
+  width:40px; height:40px; border-radius:10px;
+  background:transparent;
+  background-color:transparent;
+  overflow:hidden;
   display:flex; align-items:center; justify-content:center;
-  font-family:var(--syne); font-weight:800; font-size:16px;
   position:relative; flex-shrink:0;
+  border:1px solid rgba(170,255,0,0.25);
+}
+.ww-av img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  border-radius:inherit;
+  background:transparent;
 }
 .ww-av-dot {
   position:absolute; bottom:1px; right:1px;
@@ -1011,7 +1058,9 @@ footer {
   .result-card { padding:24px; }
 
   footer { padding:24px 16px 16px; }
-  footer .footer-copy, footer .footer-logo, footer .footer-live { font-size:11px; }
+  footer .footer-copy, footer .footer-live { font-size:11px; }
+  .footer-logo img { height:28px; }
+  .nav-logo img { height:28px; }
 }
 
 /* ── RESPONSIVE 400px ── */
@@ -1047,8 +1096,8 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">
-    <span class="logo-dot"></span> SYSSTEM
+  <a href="#" class="nav-logo" aria-label="SYSSTEM">
+    <img src="assets/logo.png" alt="SYSSTEM" width="39" height="32">
   </a>
   <ul class="nav-center">
     <li><a href="#services" data-i18n="n_sv">Услуги</a></li>
@@ -1104,7 +1153,7 @@ footer {
     </h1>
 
     <p class="hero-sub" data-i18n="hero_sub">
-      Внедряем AI-автоматизацию: чатботы, CRM, голосовые агенты. Клиент получает ответ за 3 секунды — без менеджера. Запуск под ключ за 14 дней с личным ведением проекта.
+      Внедряем AI-автоматизацию: чатботы, CRM и автоматизацию соцсетей. Клиент получает ответ за 3 секунды — без менеджера. Запуск под ключ за 14 дней с личным ведением проекта.
     </p>
 
     <div class="hero-actions">
@@ -1148,7 +1197,7 @@ footer {
 <section class="leadmag-section">
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;justify-content:center;">
     <div style="height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--border))"></div>
-    <span style="font-size:11px;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;font-family:var(--syne);font-weight:600;" data-i18n="lm_tag">Выберите с чего начать — всё бесплатно</span>
+    <span style="font-size:11px;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;font-family:var(--syne);font-weight:600;" data-i18n="lm_tag">Выберите, с чего начать — всё бесплатно</span>
     <div style="height:1px;flex:1;background:linear-gradient(90deg,var(--border),transparent)"></div>
   </div>
   <div class="leadmag-grid">
@@ -1179,19 +1228,11 @@ footer {
   <div class="ticker-track">
     <div class="ticker-item">WhatsApp чатбот <span class="ticker-sep">✦</span></div>
     <div class="ticker-item">CRM автоматизация <span class="ticker-sep">✦</span></div>
-    <div class="ticker-item">AI голосовой агент <span class="ticker-sep">✦</span></div>
     <div class="ticker-item">Автоматизация соцсетей <span class="ticker-sep">✦</span></div>
-    <div class="ticker-item">Бот возврата заказов <span class="ticker-sep">✦</span></div>
-    <div class="ticker-item">HR онбординг <span class="ticker-sep">✦</span></div>
-    <div class="ticker-item">Управление отзывами <span class="ticker-sep">✦</span></div>
     <div class="ticker-item">Бесплатный сайт в подарок 🎁 <span class="ticker-sep">✦</span></div>
     <div class="ticker-item">WhatsApp чатбот <span class="ticker-sep">✦</span></div>
     <div class="ticker-item">CRM автоматизация <span class="ticker-sep">✦</span></div>
-    <div class="ticker-item">AI голосовой агент <span class="ticker-sep">✦</span></div>
     <div class="ticker-item">Автоматизация соцсетей <span class="ticker-sep">✦</span></div>
-    <div class="ticker-item">Бот возврата заказов <span class="ticker-sep">✦</span></div>
-    <div class="ticker-item">HR онбординг <span class="ticker-sep">✦</span></div>
-    <div class="ticker-item">Управление отзывами <span class="ticker-sep">✦</span></div>
     <div class="ticker-item">Бесплатный сайт в подарок 🎁 <span class="ticker-sep">✦</span></div>
   </div>
 </div>
@@ -1200,7 +1241,7 @@ footer {
 <section class="chat-section reveal" id="demo">
   <div class="chat-section-inner">
     <div class="chat-left">
-      <div class="section-label" data-i18n="demo_tag">Смотри как это работает</div>
+      <div class="section-label" data-i18n="demo_tag">Смотри, как это работает</div>
       <h2 class="section-title" data-i18n="demo_title">Клиент пишет.<br>Бот отвечает.<br><span style="color:var(--g)">Ты спишь.</span></h2>
       <p class="section-sub" style="margin-top:16px" data-i18n="demo_sub">Реальный сценарий — клиент кофейни пишет в WhatsApp. Бот отвечает мгновенно, принимает заказ, никакого менеджера не нужно.</p>
 
@@ -1304,7 +1345,7 @@ footer {
             </div>
 
             <div class="msg in m2">
-              <span data-i18n="cm2">Привет! ☕ Капучино 300мл — 800₸, 400мл — 950₸. Добавить в заказ?</span>
+              <span data-i18n="cm2">Привет! ☕ Капучино 300 мл — 800₸, 400 мл — 950₸. Добавить в заказ?</span>
               <div class="msg-meta"><span class="msg-time-wa">09:14</span></div>
             </div>
 
@@ -1327,7 +1368,7 @@ footer {
             </div>
 
             <div class="msg out m5">
-              <span data-i18n="cm5">Тогда 2 капучино 300мл, пожалуйста</span>
+              <span data-i18n="cm5">Тогда 2 капучино 300 мл, пожалуйста</span>
               <div class="msg-meta">
                 <span class="msg-time-wa">09:16</span>
                 <span class="msg-ticks">
@@ -1340,7 +1381,7 @@ footer {
             </div>
 
             <div class="msg in m6">
-              <span data-i18n="cm6">Отлично! Принял заказ 📋<br><br>2× Капучино 300мл — 1600₸<br>Укажите имя и способ оплаты 👇</span>
+              <span data-i18n="cm6">Отлично! Принял заказ 📋<br><br>2× Капучино 300 мл — 1600₸<br>Укажите имя и способ оплаты 👇</span>
               <div class="msg-meta"><span class="msg-time-wa">09:16</span></div>
             </div>
 
@@ -1413,46 +1454,18 @@ footer {
       <div class="svc-tag" data-i18n="s2t">от $400/мес</div>
     </div>
     <div class="svc-card">
-      <div class="svc-icon">📞</div>
-      <div class="svc-num">03</div>
-      <div class="svc-name" data-i18n="s3n">AI голосовой агент</div>
-      <div class="svc-desc" data-i18n="s3d">Робот звонит и квалифицирует клиентов. Как менеджер, но без зарплаты.</div>
-      <div class="svc-tag" data-i18n="s3t">от $500/мес</div>
-    </div>
-    <div class="svc-card">
       <div class="svc-icon">📱</div>
-      <div class="svc-num">04</div>
-      <div class="svc-name" data-i18n="s4n">Автоматизация соцсетей</div>
-      <div class="svc-desc" data-i18n="s4d">Посты, ответы, лидогенерация — система работает пока вы занимаетесь бизнесом.</div>
-      <div class="svc-tag" data-i18n="s4t">от $350/мес</div>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">🛒</div>
-      <div class="svc-num">05</div>
-      <div class="svc-name" data-i18n="s5n">Бот возврата заказов</div>
-      <div class="svc-desc" data-i18n="s5d">Клиент бросил корзину? Бот догоняет и возвращает. Деньги остаются.</div>
-      <div class="svc-tag" data-i18n="s5t">от $300/мес</div>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">👥</div>
-      <div class="svc-num">06</div>
-      <div class="svc-name" data-i18n="s6n">HR онбординг бот</div>
-      <div class="svc-desc" data-i18n="s6d">Новые сотрудники обучаются автоматически. HR занимается важным.</div>
-      <div class="svc-tag" data-i18n="s6t">от $250/мес</div>
-    </div>
-    <div class="svc-card">
-      <div class="svc-icon">⭐</div>
-      <div class="svc-num">07</div>
-      <div class="svc-name" data-i18n="s7n">Управление отзывами</div>
-      <div class="svc-desc" data-i18n="s7d">ИИ отвечает на отзывы в 2GIS, Google, Instagram. Репутация под контролем.</div>
-      <div class="svc-tag" data-i18n="s7t">от $200/мес</div>
+      <div class="svc-num">03</div>
+      <div class="svc-name" data-i18n="s3n">Автоматизация соцсетей</div>
+      <div class="svc-desc" data-i18n="s3d">Посты, ответы, лидогенерация — система работает, пока вы занимаетесь бизнесом.</div>
+      <div class="svc-tag" data-i18n="s3t">от $350/мес</div>
     </div>
     <div class="svc-card">
       <div class="svc-icon">🌐</div>
-      <div class="svc-num">08</div>
-      <div class="svc-name" data-i18n="s8n">Ещё что-то нужно?</div>
-      <div class="svc-desc" data-i18n="s8d">Любая автоматизация на запрос. Расскажите — придумаем решение.</div>
-      <div class="svc-tag" data-i18n="s8t">Индивидуально</div>
+      <div class="svc-num">04</div>
+      <div class="svc-name" data-i18n="s4n">Ещё что-то нужно?</div>
+      <div class="svc-desc" data-i18n="s4d">Любая автоматизация по запросу. Расскажите — придумаем решение.</div>
+      <div class="svc-tag" data-i18n="s4t">Индивидуально</div>
     </div>
 
     <!-- BONUS -->
@@ -1460,7 +1473,7 @@ footer {
       <div style="font-size:28px">🎁</div>
       <div style="flex:1">
         <div class="svc-name" data-i18n="s9n">Бесплатный сайт в подарок</div>
-        <div class="svc-desc" style="color:rgba(170,255,0,0.7);max-width:500px" data-i18n="s9d">При подключении любой услуги — создаём профессиональный сайт для вашего бизнеса. Бесплатно. Как этот.</div>
+        <div class="svc-desc" style="color:rgba(170,255,0,0.7);max-width:500px" data-i18n="s9d">При подключении любой услуги — создаём профессиональный сайт для вашего бизнеса. Бесплатно.</div>
       </div>
       <div class="bonus-badge" data-i18n="s9b">БЕСПЛАТНО</div>
     </div>
@@ -1527,11 +1540,11 @@ footer {
       <div class="result-who" data-i18n="r2c">// ДЛЯ КОГО: ОТДЕЛЫ ПРОДАЖ ОТ 2 ЧЕЛ.</div>
     </div>
     <div class="result-card">
-      <div class="result-tag">03 // ГОЛОС // ЗВОНКИ</div>
+      <div class="result-tag">03 // СОЦСЕТИ // ЛИДЫ</div>
       <div class="result-big pos">24/7</div>
-      <div class="result-what" data-i18n="r3w">Голосовой агент</div>
-      <div class="result-how" data-i18n="r3h">AI обзванивает базу, подтверждает записи, переносит встречи и собирает обратную связь. Без выходных и больничных.</div>
-      <div class="result-who" data-i18n="r3c">// ДЛЯ КОГО: КЛИНИКИ, САЛОНЫ, СЕРВИСЫ</div>
+      <div class="result-what" data-i18n="r3w">Автоматизация соцсетей</div>
+      <div class="result-how" data-i18n="r3h">Система публикует контент, отвечает в Direct и Instagram и ловит лиды, пока вы занимаетесь бизнесом. Без выходных и больничных.</div>
+      <div class="result-who" data-i18n="r3c">// ДЛЯ КОГО: БРЕНДЫ, УСЛУГИ, E-COMMERCE</div>
     </div>
   </div>
 </section>
@@ -1627,11 +1640,11 @@ footer {
         </div>
         <div class="perk">
           <div class="perk-icon">⚡</div>
-          <span data-i18n="p3">Через 14 дней система уже работает на тебя</span>
+          <span data-i18n="p3">Через 14 дней система уже работает на вас</span>
         </div>
         <div class="perk">
           <div class="perk-icon">🎁</div>
-          <span data-i18n="p4">Сайт как этот — в подарок при старте</span>
+          <span data-i18n="p4">Профессиональный сайт — в подарок при старте</span>
         </div>
       </div>
     </div>
@@ -1666,7 +1679,7 @@ footer {
   <div class="contacts-grid">
     <div>
       <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,3.5vw,42px);letter-spacing:-0.03em;line-height:1.1;margin-bottom:16px;" data-i18n="cc_title">Предпочитаете написать напрямую?</h2>
-      <p style="font-size:15px;color:rgba(255,255,255,0.4);line-height:1.7;font-weight:300;" data-i18n="cc_sub">Отвечаем быстро. Напишите нам в WhatsApp или Instagram — обсудим как автоматизировать ваш бизнес.</p>
+      <p style="font-size:15px;color:rgba(255,255,255,0.4);line-height:1.7;font-weight:300;" data-i18n="cc_sub">Отвечаем быстро. Напишите нам в WhatsApp или Instagram — обсудим, как автоматизировать ваш бизнес.</p>
     </div>
     <div class="contacts-links">
 
@@ -1717,8 +1730,10 @@ footer {
 </section>
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">SYSSTEM</div>
-  <div class="footer-copy">© 2025 SYSSTEM.AGENCY</div>
+  <div class="footer-logo">
+    <img src="assets/logo.png" alt="SYSSTEM" width="39" height="32">
+  </div>
+  <div class="footer-copy">© 2026 SYSSTEM.AGENCY</div>
   <div class="footer-live">
     <div class="live-dot"></div>
     <span data-i18n="fl_live">Все системы работают</span>
@@ -1741,11 +1756,11 @@ const T = {
     wa_lastseen:'в сети',
     badge:'AI автоматизация · Алматы / Астана',
     h1a:'Увеличим поток', h1b:'заявок в ', h1c:'2–4 раза', h1d:'за 30 дней.',
-    hero_sub:'Внедряем AI-автоматизацию: чатботы, CRM, голосовые агенты. Клиент получает ответ за 3 секунды — без менеджера. Запуск под ключ за 14 дней с личным ведением проекта.',
+    hero_sub:'Внедряем AI-автоматизацию: чатботы, CRM и автоматизацию соцсетей. Клиент получает ответ за 3 секунды — без менеджера. Запуск под ключ за 14 дней с личным ведением проекта.',
     cta1:'Получить бесплатный разбор', cta2:'Узнать, где теряю клиентов',
     cta_sub:'Ответим за 5 минут · Без спама · Бесплатно',
     st1:'скорость ответа AI', st2:'бот без выходных', st3:'запуск под ключ', st4:'личное ведение проекта',
-    lm_tag:'Выберите с чего начать — всё бесплатно',
+    lm_tag:'Выберите, с чего начать — всё бесплатно',
     lm1t:'Бесплатный аудит', lm1d:'Найдём, где теряются клиенты и деньги — конкретно в вашем бизнесе',
     lm2t:'Чек-лист автоматизации', lm2d:'23 точки роста для бизнеса в Казахстане — пришлём в WhatsApp',
     lm3t:'Разбор в Zoom', lm3d:'30-минутный звонок — покажем конкретный план роста для вашей ниши',
@@ -1754,7 +1769,7 @@ const T = {
     ww_msg:'👋 Узнайте бесплатно, где ваш бизнес теряет клиентов — покажем конкретные точки роста',
     ww_cta:'Получить разбор бесплатно →',
     ww_hint:'Без спама · Ответим за 5 минут',
-    demo_tag:'Смотри как это работает',
+    demo_tag:'Смотри, как это работает',
     demo_title:'Клиент пишет.<br>Бот отвечает.<br><span style="color:var(--g)">Ты спишь.</span>',
     demo_sub:'Реальный сценарий — клиент кофейни пишет в WhatsApp. Бот отвечает мгновенно, принимает заказ, никакого менеджера не нужно.',
     f1t:'Ответ за 3 секунды', f1d:'Клиент не ждёт. Никогда.',
@@ -1762,39 +1777,35 @@ const T = {
     f3t:'Принимает заказы', f3d:'Собирает данные, подтверждает, передаёт в CRM.',
     bot_name:'SmartBot · Кофейня', today:'Сегодня',
     cm1:'Привет! Сколько стоит капучино?',
-    cm2:'Привет! ☕ Капучино 300мл — 800₸, 400мл — 950₸. Добавить в заказ?',
+    cm2:'Привет! ☕ Капучино 300 мл — 800₸, 400 мл — 950₸. Добавить в заказ?',
     cm3:'Вы сейчас открыты?',
     cm4:'Да! Работаем 08:00–22:00 каждый день 🕗 Принимаем заказы прямо сейчас.',
-    cm5:'Тогда 2 капучино 300мл, пожалуйста',
-    cm6:'Отлично! Принял заказ 📋 2× Капучино 300мл — 1600₸. Укажите имя и способ оплаты 👇',
+    cm5:'Тогда 2 капучино 300 мл, пожалуйста',
+    cm6:'Отлично! Принял заказ 📋 2× Капучино 300 мл — 1600₸. Укажите имя и способ оплаты 👇',
     cm7:'Алибек, картой',
     cm8:'Готово, Алибек! ✅ Заказ принят. Ожидайте 10–15 минут 🚀',
     type_msg:'Сообщение',
     sv_tag:'Что мы делаем', sv_title:'Наши услуги.', sv_sub:'Каждая услуга решает конкретную утечку денег или времени в вашем бизнесе.',
     s1n:'WhatsApp / Telegram чатбот', s1d:'ИИ отвечает клиентам 24/7. Цены, заказы, вопросы — мгновенно.', s1t:'от $300/мес',
     s2n:'CRM автоматизация', s2d:'Заявки, сделки, напоминания — всё двигается само. Продажи не теряются.', s2t:'от $400/мес',
-    s3n:'AI голосовой агент', s3d:'Робот звонит и квалифицирует клиентов. Как менеджер, но без зарплаты.', s3t:'от $500/мес',
-    s4n:'Автоматизация соцсетей', s4d:'Посты, ответы, лидогенерация — система работает пока вы занимаетесь бизнесом.', s4t:'от $350/мес',
-    s5n:'Бот возврата заказов', s5d:'Клиент бросил корзину? Бот догоняет и возвращает. Деньги остаются.', s5t:'от $300/мес',
-    s6n:'HR онбординг бот', s6d:'Новые сотрудники обучаются автоматически. HR занимается важным.', s6t:'от $250/мес',
-    s7n:'Управление отзывами', s7d:'ИИ отвечает на отзывы в 2GIS, Google, Instagram. Репутация под контролем.', s7t:'от $200/мес',
-    s8n:'Ещё что-то нужно?', s8d:'Любая автоматизация на запрос. Расскажите — придумаем решение.', s8t:'Индивидуально',
-    s9n:'Бесплатный сайт в подарок', s9d:'При подключении любой услуги — создаём профессиональный сайт для вашего бизнеса. Бесплатно. Как этот.', s9b:'БЕСПЛАТНО',
+    s3n:'Автоматизация соцсетей', s3d:'Посты, ответы, лидогенерация — система работает, пока вы занимаетесь бизнесом.', s3t:'от $350/мес',
+    s4n:'Ещё что-то нужно?', s4d:'Любая автоматизация по запросу. Расскажите — придумаем решение.', s4t:'Индивидуально',
+    s9n:'Бесплатный сайт в подарок', s9d:'При подключении любой услуги — создаём профессиональный сайт для вашего бизнеса. Бесплатно.', s9b:'БЕСПЛАТНО',
     hw_tag:'Процесс', hw_title:'От проблемы до<br>работающей системы.', hw_sub:'Четыре чётких шага. Никаких сюрпризов.',
-    hw1t:'Аудит бесплатно', hw1d:'Смотрим на ваш бизнес и находим конкретные места, где утекают деньги из-за ручных процессов.',
-    hw2t:'Проектируем систему', hw2d:'Разрабатываем решение под ваш бизнес. Никаких шаблонов — только то, что работает в вашей нише.',
-    hw3t:'Запускаем за 14 дней', hw3d:'Внедряем, тестируем, настраиваем. Через две недели система уже работает.',
-    hw4t:'Растём вместе', hw4d:'Ежемесячное сопровождение и масштабирование. Система умнеет вместе с бизнесом.',
+    hw1t:'Аудит бесплатно', hw1d:'Смотрим на ваш бизнес и находим конкретные места, где утекают деньги и время из-за ручных процессов.',
+    hw2t:'Проектируем систему', hw2d:'Разрабатываем решение под ваш бизнес. Никаких шаблонов — только то, что реально работает в вашей нише.',
+    hw3t:'Запускаем за 14 дней', hw3d:'Внедряем, тестируем, настраиваем. Через две недели система уже работает и зарабатывает.',
+    hw4t:'Растём вместе', hw4d:'Ежемесячное сопровождение и масштабирование. Система становится умнее вместе с вашим бизнесом.',
     rs_tag:'Что мы делаем', rs_title:'Три направления.<br>Один результат.', rs_sub:'Без маркетинговых обещаний. Только конкретно — что собираем, как это работает и за что отвечаем.',
     r1w:'Скорость ответа', r1h:'WhatsApp-бот отвечает на типовые вопросы клиента мгновенно, квалифицирует заявку и передаёт менеджеру только горячих лидов.', r1c:'// ДЛЯ КОГО: РИТЕЙЛ, УСЛУГИ, E-COMMERCE',
     r2w:'Меньше рутины', r2h:'CRM сама ведёт сделки, ставит задачи и шлёт напоминания. Менеджер занимается продажами, а не админкой.', r2c:'// ДЛЯ КОГО: ОТДЕЛЫ ПРОДАЖ ОТ 2 ЧЕЛ.',
-    r3w:'Голосовой агент', r3h:'AI обзванивает базу, подтверждает записи, переносит встречи и собирает обратную связь. Без выходных и больничных.', r3c:'// ДЛЯ КОГО: КЛИНИКИ, САЛОНЫ, СЕРВИСЫ',
-    ct_tag:'Начать работу', ct_title:'Готовы перестать терять деньги на рутине?',
-    ct_sub:'Оставьте заявку. Если мы видим реальный ROI — назначим бесплатный аудит-звонок и покажем конкретный план.',
-    p1:'Минимальный бюджет: от $300/мес', p2:'Стартовое предложение этого месяца', p3:'Запуск: до 14 дней', p4:'Бесплатный сайт при подключении',
+    r3w:'Автоматизация соцсетей', r3h:'Система публикует контент, отвечает в Direct и Instagram и ловит лиды, пока вы занимаетесь бизнесом. Без выходных и больничных.', r3c:'// ДЛЯ КОГО: БРЕНДЫ, УСЛУГИ, E-COMMERCE',
+    ct_tag:'Начать работу', ct_title:'Хватит кормить конкурентов своими клиентами.',
+    ct_sub:'Оставьте заявку. Если мы видим реальный ROI для вашего бизнеса — назначим бесплатный аудит-звонок и покажем конкретный план.',
+    p1:'Старт от $300 — меньше одного сотрудника', p2:'Клиенты наших клиентов платят быстрее и чаще', p3:'Через 14 дней система уже работает на вас', p4:'Профессиональный сайт — в подарок при старте',
     fl1:'НАЗВАНИЕ КОМПАНИИ', fl2:'ОСНОВНАЯ ПРОБЛЕМА', fl3:'WHATSAPP / TELEGRAM', fl4:'РАССКАЖИТЕ ПОДРОБНЕЕ (необязательно)',
     fp1:'ТОО «Ваш бизнес»', fp2:'Что занимает больше всего времени?', fp3:'+7 700 000 0000', fp4:'Ваш бизнес, масштаб, что хотите автоматизировать...',
-    fb:'Отправить заявку', fl_live:'Все системы работают',
+    fb:'Хочу так же — свяжитесь со мной', fl_live:'Все системы работают',
     rv_tag:'Запуск', rv_title:'Запуск под ключ<br>за 14 дней.', rv_sub:'Берём ограниченное число проектов одновременно — чтобы каждый запуск шёл с полной вовлечённостью и быстрым результатом. Если ваш бизнес подходит — назначим бесплатный аудит и покажем точный план.',
     rv_b1:'стартовое предложение этого месяца',
     rv_b2:'личное ведение проекта от и до',
@@ -1802,14 +1813,14 @@ const T = {
     rv_cta:'Обсудить мой проект',
     rv_note:'Бесплатный аудит · Без обязательств · Ответим за 5 минут',
     fq_tag:'Частые вопросы', fq_title:'Снимаем<br>все возражения.',
-    fq1q:'Сколько стоит внедрение?', fq1a:'Старт — <strong>от $300/мес</strong> для чатбота и от $400/мес для CRM. Это меньше зарплаты одного менеджера. Проведём бесплатный аудит и назовём точную цифру под вашу нишу — без обмана и скрытых платежей.',
-    fq2q:'Как быстро будет результат?', fq2a:'Систему запускаем за <strong>14 дней</strong>. Первые результаты — через <strong>1–2 недели</strong>: рост скорости ответа, снижение потерь заявок. Полный эффект — через 30–60 дней.',
-    fq3q:'Что если бот не подойдёт под мой бизнес?', fq3a:'Начинаем с <strong>бесплатного аудита</strong> — если не видим ROI, честно скажем. Если после запуска в течение <strong>30 дней</strong> нет улучшений — дорабатываем за свой счёт.',
-    fq4q:'Нужна ли техническая база или команда?', fq4a:'Нет. Мы берём на себя <strong>всё</strong>: настройку, интеграции, тестирование и запуск. От вас нужны только ответы о бизнесе и 1–2 часа на созвон.',
-    fq5q:'Как это работает с WhatsApp и Instagram?', fq5a:'Подключаем через официальный <strong>WhatsApp Business API</strong> и Instagram Direct. Бот отвечает от имени вашего аккаунта — клиент не видит разницы. Работает <strong>24/7</strong>.',
-    fq6q:'Что с поддержкой после запуска?', fq6a:'Полное <strong>ежемесячное сопровождение</strong>: мониторинг, обновление скриптов, отчёты. Пишете в WhatsApp — отвечаем в течение часа.',
+    fq1q:'Сколько стоит внедрение?', fq1a:'Старт — <strong>от $300/мес</strong> для чатбота и от $400/мес для CRM. Это меньше зарплаты одного менеджера, который допускает ошибки. Большинство клиентов окупают инвестиции в течение <strong>первого месяца</strong> за счёт роста конверсии. Проведём бесплатный аудит и назовём точную цифру для вашей ниши.',
+    fq2q:'Как быстро будет результат?', fq2a:'Систему запускаем за <strong>14 дней</strong> — от созвона до первого ответа бота. Первые результаты видны в течение <strong>1–2 недель</strong>: рост скорости ответа, снижение потерь заявок. Полный эффект — через 30–60 дней, когда система набирает обучение на реальных диалогах.',
+    fq3q:'Что если бот не подойдёт под мой бизнес?', fq3a:'Мы начинаем с <strong>бесплатного аудита</strong> — если мы не видим реального ROI для вашего бизнеса, честно скажем об этом и не возьмёмся. Если после запуска в течение <strong>30 дней</strong> нет улучшений — дорабатываем за свой счёт до результата.',
+    fq4q:'Нужна ли техническая база или команда?', fq4a:'Нет. Мы берём на себя <strong>всё</strong>: настройку, интеграции, тестирование и запуск. От вас нужны только ответы на вопросы о вашем бизнесе и 1–2 часа времени на созвон. Никаких технических знаний не требуется.',
+    fq5q:'Как это работает с WhatsApp и Instagram?', fq5a:'Мы подключаем бота через официальный <strong>WhatsApp Business API</strong> и Instagram Direct API. Бот отвечает от имени вашего номера/аккаунта — клиент не видит разницы. Работает <strong>24/7</strong>, отвечает на всех языках, не устаёт и не делает ошибок.',
+    fq6q:'Что с поддержкой после запуска?', fq6a:'Полное <strong>ежемесячное сопровождение</strong>: мониторинг работы, обновление скриптов, добавление новых сценариев, отчёты по эффективности. Вы пишете в WhatsApp — отвечаем в течение часа. Система становится умнее каждый месяц.',
     cc_title:'Предпочитаете написать напрямую?',
-    cc_sub:'Отвечаем быстро. Напишите нам в WhatsApp или Instagram.',
+    cc_sub:'Отвечаем быстро. Напишите нам в WhatsApp или Instagram — обсудим, как автоматизировать ваш бизнес.',
     cc_wa:'Написать напрямую — самый быстрый ответ',
     cc_ig:'@manssarss — советы по автоматизации каждый день',
     cc_ph:'Позвонить или написать напрямую'
@@ -1819,7 +1830,7 @@ const T = {
     wa_lastseen:'online',
     badge:'AI automation · Almaty / Astana',
     h1a:'We grow your', h1b:'leads ', h1c:'2–4×', h1d:'in 30 days.',
-    hero_sub:'We deploy AI automation: chatbots, CRM, voice agents. Clients get a reply in 3 seconds — no manager needed. Turnkey launch in 14 days with hands-on project handling.',
+    hero_sub:'We deploy AI automation: chatbots, CRM, social media automation. Clients get a reply in 3 seconds — no manager needed. Turnkey launch in 14 days with hands-on project handling.',
     cta1:'Get a free breakdown', cta2:'Find where I lose clients',
     cta_sub:'Reply in 5 min · No spam · Free',
     st1:'AI reply speed', st2:'bot with no days off', st3:'turnkey launch', st4:'hands-on project handling',
@@ -1829,7 +1840,7 @@ const T = {
     lm3t:'Zoom breakdown', lm3d:'30-min call — we show an exact growth plan for your niche',
     lm_btn:'Get it →', lm_pop:'POPULAR',
     ww_status:'● Online · Reply in 5 min',
-    ww_msg:'👋 Find out free where your business loses clients — we show you exact growth points',
+    ww_msg:'👋 Find out for free where your business loses clients — we show you exact growth points',
     ww_cta:'Get a free breakdown →',
     ww_hint:'No spam · Reply in 5 minutes',
     demo_tag:'See how it works',
@@ -1851,13 +1862,9 @@ const T = {
     sv_tag:'What we do', sv_title:'Our services.', sv_sub:'Each service fixes a specific money or time leak in your business.',
     s1n:'WhatsApp / Telegram chatbot', s1d:'AI answers clients 24/7. Prices, orders, questions — instantly.', s1t:'from $300/mo',
     s2n:'CRM automation', s2d:'Leads, deals, reminders — everything moves automatically. No sale gets lost.', s2t:'from $400/mo',
-    s3n:'AI voice agent', s3d:'Robot calls and qualifies clients. Like a manager, but without the salary.', s3t:'from $500/mo',
-    s4n:'Social media automation', s4d:'Posts, replies, lead gen — system works while you focus on business.', s4t:'from $350/mo',
-    s5n:'E-commerce recovery bot', s5d:"Client abandoned cart? Bot follows up and recovers. Money stays in.", s5t:'from $300/mo',
-    s6n:'HR onboarding bot', s6d:'New employees train automatically. HR focuses on what matters.', s6t:'from $250/mo',
-    s7n:'Review management', s7d:'AI monitors and replies to reviews on Google, Instagram. Reputation controlled.', s7t:'from $200/mo',
-    s8n:'Need something else?', s8d:'Any automation on request. Tell us — we\'ll find a solution.', s8t:'Custom',
-    s9n:'Free website — bonus gift', s9d:'Sign up for any service and we build a professional website for your business. Free. Like this one.', s9b:'FREE',
+    s3n:'Social media automation', s3d:'Posts, replies, lead gen — system works while you focus on business.', s3t:'from $350/mo',
+    s4n:'Need something else?', s4d:'Any automation on request. Tell us — we\'ll find a solution.', s4t:'Custom',
+    s9n:'Free website — bonus gift', s9d:'Sign up for any service and we build a professional website for your business. Free.', s9b:'FREE',
     hw_tag:'Process', hw_title:'From problem to<br>working system.', hw_sub:'Four clear steps. No surprises.',
     hw1t:'Free audit', hw1d:'We look at your business and find specific places where money and time leak through manual processes.',
     hw2t:'Design the system', hw2d:'We build a solution for your business. No templates — only what actually works in your niche.',
@@ -1866,7 +1873,7 @@ const T = {
     rs_tag:'What we do', rs_title:'Three directions.<br>One outcome.', rs_sub:'No marketing promises. Just what we build, how it works, and what we own end-to-end.',
     r1w:'Reply speed', r1h:"WhatsApp bot answers typical client questions instantly, qualifies the lead and routes only the hot ones to a human.", r1c:'// FOR: RETAIL, SERVICES, E-COMMERCE',
     r2w:'Less busywork', r2h:'CRM runs deals, sets tasks and sends reminders automatically. Your team sells — not pushes paper.', r2c:'// FOR: SALES TEAMS OF 2+ PEOPLE',
-    r3w:'Voice agent', r3h:"AI calls the base, confirms bookings, reschedules and collects feedback. No days off, no sick leave.", r3c:'// FOR: CLINICS, SALONS, SERVICES',
+    r3w:'Social media automation', r3h:"The system posts content, replies in Direct and Instagram, and catches leads while you run the business. No days off, no sick leave.", r3c:'// FOR: BRANDS, SERVICES, E-COMMERCE',
     ct_tag:'Get started', ct_title:'Ready to stop losing money on routine?',
     ct_sub:"Submit your application. If we see real ROI for your business — we'll schedule a free audit call and show you the exact plan.",
     p1:'Minimum budget: from $300/mo', p2:"This month's launch offer", p3:'Launch: up to 14 days', p4:'Free website included',
@@ -1897,61 +1904,57 @@ const T = {
     wa_lastseen:'желіде',
     badge:'ЖИ автоматтандыру · Алматы / Астана',
     h1a:'Өтінімдер', h1b:'ағынын ', h1c:'2–4 есе', h1d:'30 күнде арттырамыз.',
-    hero_sub:'ЖИ автоматтандыруды енгіземіз: чатботтар, CRM, дауыстық агенттер. Клиент 3 секундта жауап алады — менеджерсіз. Жобаны жеке жүргізіп, 14 күнде толық іске қосамыз.',
+    hero_sub:'ЖИ автоматтандыруды енгіземіз: чатботтар, CRM, әлеуметтік желіні автоматтандыру. Клиент 3 секундта жауап алады — менеджерсіз. Жобаны жеке жүргізіп, 14 күнде толық іске қосамыз.',
     cta1:'Тегін талдау алу', cta2:'Қайда клиент жоғалтамын',
     cta_sub:'5 минутта жауап · Спамсыз · Тегін',
     st1:'AI жауап жылдамдығы', st2:'бот демалыссыз', st3:'толық іске қосу', st4:'жобаны жеке жүргізу',
     lm_tag:'Бастау нүктесін таңда — бәрі тегін',
     lm1t:'Тегін аудит', lm1d:'Клиенттер мен ақша қайда кетеді — бизнесіңізге нақты анықтаймыз',
-    lm2t:'Автоматтандыру чек-листі', lm2d:'Қазақстан бизнесі үшін 23 өсу нүктесі — WhatsApp-қа жіберемыз',
+    lm2t:'Автоматтандыру чек-листі', lm2d:'Қазақстан бизнесі үшін 23 өсу нүктесі — WhatsApp-қа жібереміз',
     lm3t:'Zoom талдауы', lm3d:'30 минуттық қоңырау — нишаңыз үшін нақты өсу жоспарын көрсетеміз',
     lm_btn:'Алу →', lm_pop:'ТАНЫМАЛ',
     ww_status:'● Желіде · 5 минутта жауап',
     ww_msg:'👋 Бизнесіңіз клиентті қайда жоғалтатынын тегін біліңіз — нақты өсу нүктелерін көрсетеміз',
     ww_cta:'Тегін талдау алу →',
     ww_hint:'Спамсыз · 5 минутта жауап',
-    demo_tag:'Қалай жұмыс жасайтынын қара',
+    demo_tag:'Қалай жұмыс істейтінін қара',
     demo_title:'Клиент жазады.<br>Бот жауап береді.<br><span style="color:var(--g)">Сен ұйықтайсың.</span>',
     demo_sub:'Нақты сценарий — кофехана клиенті WhatsApp-қа жазады. Бот лезде жауап береді, тапсырысты қабылдайды.',
     f1t:'3 секундта жауап', f1d:'Клиент күтпейді. Ешқашан.',
-    f2t:'24/7 жұмыс жасайды', f2d:'Түндер, мерекелер, демалыс күндер — маңызды емес.',
+    f2t:'24/7 жұмыс істейді', f2d:'Түндер, мерекелер, демалыс күндер — маңызды емес.',
     f3t:'Тапсырыстарды қабылдайды', f3d:'Деректерді жинайды, растайды, CRM-ге жібереді.',
     bot_name:'SmartBot · Кофехана', today:'Бүгін',
     cm1:'Сәлем! Капучино қанша тұрады?',
-    cm2:'Сәлем! ☕ Капучино 300мл — 800₸, 400мл — 950₸. Тапсырысқа қосайын ба?',
+    cm2:'Сәлем! ☕ Капучино 300 мл — 800₸, 400 мл — 950₸. Тапсырысқа қосайын ба?',
     cm3:'Қазір ашықсыздар ма?',
-    cm4:'Иә! Күн сайын 08:00–22:00 жұмыс жасаймыз 🕗 Тапсырыс қабылдаудамыз.',
-    cm5:'Онда 2 капучино 300мл, рахмет',
-    cm6:'Тамаша! Тапсырыс қабылданды 📋 2× Капучино 300мл — 1600₸. Есімің мен төлем тәсілін жаз 👇',
+    cm4:'Иә! Күн сайын 08:00–22:00 жұмыс істейміз 🕗 Тапсырыс қабылдаудамыз.',
+    cm5:'Онда 2 капучино 300 мл, рахмет',
+    cm6:'Тамаша! Тапсырыс қабылданды 📋 2× Капучино 300 мл — 1600₸. Есіміңіз бен төлем тәсілін жазыңыз 👇',
     cm7:'Әлібек, картамен',
-    cm8:'Дайын, Әлібек! ✅ Тапсырыс қабылданды. 10–15 мин күт 🚀',
+    cm8:'Дайын, Әлібек! ✅ Тапсырыс қабылданды. 10–15 мин күтіңіз 🚀',
     type_msg:'Хабар',
     sv_tag:'Не жасаймыз', sv_title:'Біздің қызметтер.', sv_sub:'Әр қызмет бизнесіңіздегі нақты ақша немесе уақыт ысырабын шешеді.',
     s1n:'WhatsApp / Telegram чатботы', s1d:'ЖИ клиенттерге 24/7 жауап береді. Бағалар, тапсырыстар — лезде.', s1t:'$300/ай бастап',
     s2n:'CRM автоматтандыру', s2d:'Өтінімдер, мәмілелер — бәрі өздігінен жүреді. Сатулар жоғалмайды.', s2t:'$400/ай бастап',
-    s3n:'AI дауыстық агент', s3d:'Робот қоңырау шалады және клиенттерді саралайды. Жалақысыз менеджер.', s3t:'$500/ай бастап',
-    s4n:'Әлеуметтік желіні автоматтандыру', s4d:'Жарияланымдар, жауаптар — жүйе жұмыс жасайды.', s4t:'$350/ай бастап',
-    s5n:'Тапсырысты қайтару боты', s5d:'Клиент себетін тастады? Бот қайтарады. Ақша кетпейді.', s5t:'$300/ай бастап',
-    s6n:'HR онбординг боты', s6d:'Жаңа қызметкерлер автоматты оқытудан өтеді.', s6t:'$250/ай бастап',
-    s7n:'Пікірлерді басқару', s7d:'ЖИ Google, Instagram-да пікірлерге жауап береді.', s7t:'$200/ай бастап',
-    s8n:'Басқа нәрсе керек пе?', s8d:'Кез келген автоматтандыру. Айтыңыз — шешім табамыз.', s8t:'Жеке',
+    s3n:'Әлеуметтік желіні автоматтандыру', s3d:'Жарияланымдар, жауаптар — жүйе жұмыс істейді.', s3t:'$350/ай бастап',
+    s4n:'Басқа нәрсе керек пе?', s4d:'Кез келген автоматтандыру. Айтыңыз — шешім табамыз.', s4t:'Жеке',
     s9n:'Тегін сайт сыйлыққа', s9d:'Кез келген қызметке қосылғанда — кәсіби сайт тегін жасаймыз.', s9b:'ТЕГІН',
-    hw_tag:'Процесс', hw_title:'Мәселеден<br>жұмыс жүйесіне дейін.', hw_sub:'Төрт нақты қадам. Сюрприздер жоқ.',
+    hw_tag:'Үрдіс', hw_title:'Мәселеден<br>жұмыс жүйесіне дейін.', hw_sub:'Төрт нақты қадам. Сюрприздер жоқ.',
     hw1t:'Тегін аудит', hw1d:'Бизнесіңізге қараймыз және ақша мен уақыт ысыраптарын табамыз.',
-    hw2t:'Жүйе жасаймыз', hw2d:'Бизнесіңізге арнайы шешім. Үлгілер жоқ — тек нишада жұмыс жасайтын нәрсе.',
-    hw3t:'14 күнде іске қосамыз', hw3d:'Орналастырамыз, тексереміз, баптаймыз. Екі апта ішінде жүйе жұмыс жасайды.',
-    hw4t:'Бірге өсеміз', hw4d:'Ай сайынғы қолдау және масштабтау. Жүйе бизнеспен бірге ақылданады.',
-    rs_tag:'Не жасаймыз', rs_title:'Үш бағыт.<br>Бір нәтиже.', rs_sub:'Маркетингтік уәделер жоқ. Тек нақты — не құрастырамыз, қалай жұмыс жасайды және неге жауап береміз.',
+    hw2t:'Жүйе жасаймыз', hw2d:'Бизнесіңізге арнайы шешім. Үлгілер жоқ — тек нишада жұмыс істейтін нәрсе.',
+    hw3t:'14 күнде іске қосамыз', hw3d:'Орналастырамыз, тексереміз, баптаймыз. Екі апта ішінде жүйе жұмыс істейді.',
+    hw4t:'Бірге өсеміз', hw4d:'Ай сайынғы қолдау және масштабтау. Жүйе бизнеспен бірге жетіледі.',
+    rs_tag:'Не жасаймыз', rs_title:'Үш бағыт.<br>Бір нәтиже.', rs_sub:'Маркетингтік уәделер жоқ. Тек нақты — не құрастырамыз, қалай жұмыс істейді және неге жауап береміз.',
     r1w:'Жауап жылдамдығы', r1h:'WhatsApp боты клиенттің әдеттегі сұрақтарына лезде жауап береді, өтінімді саралайды және тек қызықтыны менеджерге жібереді.', r1c:'// КІМ ҮШІН: РИТЕЙЛ, ҚЫЗМЕТ, E-COMMERCE',
-    r2w:'Аз ғана рутина', r2h:'CRM өздігінен мәмілелерді жүргізеді, тапсырмалар қояды, еске салулар жібереді. Менеджер сатумен айналысады.', r2c:'// КІМ ҮШІН: САТУ БӨЛІМДЕРІ 2+ АДАМ',
-    r3w:'Дауыстық агент', r3h:'AI базаға қоңырау шалады, жазылуларды растайды, кездесулерді ауыстырады және кері байланыс жинайды. Демалыссыз.', r3c:'// КІМ ҮШІН: КЛИНИКА, САЛОН, СЕРВИС',
+    r2w:'Рутина азаяды', r2h:'CRM өздігінен мәмілелерді жүргізеді, тапсырмалар қояды, еске салулар жібереді. Менеджер сатумен айналысады.', r2c:'// КІМ ҮШІН: САТУ БӨЛІМДЕРІ 2+ АДАМ',
+    r3w:'Әлеуметтік желіні автоматтандыру', r3h:'Жүйе контент жариялайды, Direct пен Instagram-да жауап береді және лидтерді ұстайды. Демалыссыз.', r3c:'// КІМ ҮШІН: БРЕНД, ҚЫЗМЕТ, E-COMMERCE',
     ct_tag:'Бастау', ct_title:'Рутинаға ақша жоғалтуды тоқтатуға дайынсыз ба?',
     ct_sub:'Өтінім қалдырыңыз. ROI көрсек — тегін аудит қоңырауын тағайындаймыз.',
     p1:'Минималды бюджет: $300/айдан', p2:'Осы айдағы іске қосу ұсынысы', p3:'Іске қосу: 14 күнге дейін', p4:'Тіркелгенде тегін сайт',
     fl1:'КОМПАНИЯ АТЫ', fl2:'НЕГІЗГІ МӘСЕЛЕ', fl3:'WHATSAPP / TELEGRAM', fl4:'ТОЛЫҒЫРАҚ АЙТЫҢЫЗ (міндетті емес)',
     fp1:'Бизнесіңіздің аты', fp2:'Не ең көп уақыт алады?', fp3:'+7 700 000 0000', fp4:'Бизнесіңіз, масштаб, не автоматтандырғыңыз келеді...',
-    fb:'Өтінім жіберу', fl_live:'Барлық жүйелер жұмыс жасауда',
-    rv_tag:'Іске қосу', rv_title:'Толық іске қосу<br>14 күнде.', rv_sub:'Қатар жұмыс жасайтын жобалар санын шектейміз — әр іске қосу толық назармен және жылдам нәтижемен өтеді. Бизнесіңіз сәйкес келсе — тегін аудит тағайындап, нақты жоспарды көрсетеміз.',
+    fb:'Өтінім жіберу', fl_live:'Барлық жүйелер жұмыс істеуде',
+    rv_tag:'Іске қосу', rv_title:'Толық іске қосу<br>14 күнде.', rv_sub:'Қатар жұмыс істейтін жобалар санын шектейміз — әр іске қосу толық назармен және жылдам нәтижемен өтеді. Бизнесіңіз сәйкес келсе — тегін аудит тағайындап, нақты жоспарды көрсетеміз.',
     rv_b1:'осы айдағы іске қосу ұсынысы',
     rv_b2:'жобаны басынан соңына дейін жеке жүргізу',
     rv_b3:'алғашқы қоңыраудан бот іске қосуға дейін',
@@ -1962,7 +1965,7 @@ const T = {
     fq2q:'Нәтиже қаншалықты тез болады?', fq2a:'Жүйені <strong>14 күнде</strong> іске қосамыз. Алғашқы нәтиже — <strong>1–2 аптада</strong>. Толық әсер — 30–60 күнде.',
     fq3q:'Бот бизнесіме сәйкес келмесе ше?', fq3a:'<strong>Тегін аудиттен</strong> бастаймыз — ROI көрмесек, шынайы айтамыз. Іске қосқаннан кейін <strong>30 күн</strong> ішінде жақсармаса — өз есебімізден жөндейміз.',
     fq4q:'Техникалық команда керек пе?', fq4a:'Жоқ. Бәрін өз мойнымызға аламыз: баптау, интеграция, тестілеу. Сізден тек бизнес туралы жауаптар және 1–2 сағат уақыт.',
-    fq5q:'WhatsApp және Instagram-мен қалай жұмыс жасайды?', fq5a:'Ресми <strong>WhatsApp Business API</strong> және Instagram Direct арқылы қосамыз. Бот сіздің атыңыздан жауап береді. <strong>24/7</strong> жұмыс жасайды.',
+    fq5q:'WhatsApp және Instagram-мен қалай жұмыс істейді?', fq5a:'Ресми <strong>WhatsApp Business API</strong> және Instagram Direct арқылы қосамыз. Бот сіздің атыңыздан жауап береді. <strong>24/7</strong> жұмыс істейді.',
     fq6q:'Іске қосқаннан кейін қолдау қандай?', fq6a:'Толық <strong>ай сайынғы қолдау</strong>: мониторинг, жаңарту, есептер. WhatsApp-қа жазыңыз — бір сағат ішінде жауап береміз.',
     cc_title:'Тікелей жазғыңыз келе ме?',
     cc_sub:'Жылдам жауап береміз. WhatsApp немесе Instagram-ға жазыңыз.',
@@ -2209,7 +2212,7 @@ window.addEventListener('scroll', ()=>{ if(window.scrollY > 380) showWelcome(); 
 .ticker-wrap:hover .ticker-track { animation-play-state:paused; }
 
 /* ── Live dot enhanced pulse ── */
-.live-dot, .badge-dot, .logo-dot {
+.live-dot, .badge-dot {
   animation: apLivePulse 2s ease-in-out infinite !important;
 }
 @keyframes apLivePulse {
@@ -2590,28 +2593,9 @@ document.querySelectorAll('.section-title').forEach(el=>{
 });
 
 /* ══════════════════════════════════════════
-   9. LOGO TEXT SCRAMBLE ON HOVER
+   9. LOGO HOVER (image mark)
 ══════════════════════════════════════════ */
-const logoEl = document.querySelector('.nav-logo');
-if(logoEl){
-  const CHARS='ABCDEFGHIJKLMNOPQRSTUVWXYZ01';
-  const WORD='SYSSTEM';
-  let scInt=null;
-  logoEl.addEventListener('mouseenter',()=>{
-    let iter=0; clearInterval(scInt);
-    // find the text node (after logo-dot span)
-    const tn = [...logoEl.childNodes].find(n=>n.nodeType===3 && n.textContent.trim());
-    if(!tn) return;
-    scInt=setInterval(()=>{
-      tn.textContent=' '+WORD.split('').map((c,i)=>{
-        if(i<iter) return WORD[i];
-        return CHARS[Math.floor(Math.random()*CHARS.length)];
-      }).join('');
-      if(iter>=WORD.length){ tn.textContent=' '+WORD; clearInterval(scInt); }
-      iter+=.5;
-    },38);
-  });
-}
+/* text scramble removed — brand mark is now an image */
 
 /* ══════════════════════════════════════════
    10. SECTION LABEL FADE-IN
@@ -2860,7 +2844,7 @@ document.querySelectorAll('.step-num').forEach((el,i)=>{
 <div class="ww-wrap" id="welcomeWidget">
   <button class="ww-close" onclick="closeWelcome()" aria-label="Закрыть">✕</button>
   <div class="ww-header">
-    <div class="ww-av">S<div class="ww-av-dot"></div></div>
+    <div class="ww-av"><img src="assets/logo.png" alt="SYSSTEM" width="40" height="40"><div class="ww-av-dot"></div></div>
     <div>
       <div class="ww-name">SYSSTEM</div>
       <div class="ww-status" data-i18n="ww_status">● В сети · Ответим за 5 мин</div>
